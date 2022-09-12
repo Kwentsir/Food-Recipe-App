@@ -1,0 +1,11 @@
+1. -------CHECK PLURALIZE------------------------------------------
+  rails c
+  "Inventory".pluralize
+  
+----------CREATE ACTIVERECORD------------------------------------------
+  rails generate migration CreateUsers name:string
+  rails generate migration CreateInventories name:string
+  rails generate migration CreateFoods name:string measurement_unit:string price:integer
+  rails generate migration CreateInventoryFoods quantity:integer
+  rails generate migration CreateRecipes name:string preparation_time:string cooking_time:string description:text public:boolean
+  rails generate migration CreateRecipeFoods quantity:integer
