@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+.food-table {
+  width: 80%;
+  border: 2px solid;
+  margin: 3% 0 0 10%;
+  padding: 0;
+  text-align: center;
+}
+
+.food-table td,
+th {
+  border: 1px solid #edebeb;
+  padding: 8px;
+}
+
+.food-table tr:nth-child(odd) {
+  background-color: #edebeb;
+}
+
+.food-table button {
+  border: none;
+  text-decoration: underline;
+  color: blue;
+  background-color: transparent;
+}
+
+.new-food {
+  display: flex;
+  justify-content: end;
+  margin: 0 10% 0 0;
+}
+
+.new-food a {
+  text-decoration: none;
+  border: solid 2px;
+  padding: 5px;
+}
