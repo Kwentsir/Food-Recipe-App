@@ -1,6 +1,5 @@
 class FoodsController < ApplicationController
   before_action :authenticate_user!
-  
 
   # GET /foods or /foods.json
   def index
@@ -38,6 +37,7 @@ class FoodsController < ApplicationController
   end
 
   private
+
   # Only allow a list of trusted parameters through.
   def food_params
     params.require(:food).permit!
