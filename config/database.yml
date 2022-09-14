@@ -17,8 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  user: test
-  password: password
+  # user: test
+  # password: password
   
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
@@ -44,7 +44,7 @@ development:
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  # port: 5433
+  port: 5433
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
