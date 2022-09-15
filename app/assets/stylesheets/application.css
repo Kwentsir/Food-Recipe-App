@@ -49,3 +49,176 @@ th {
   border: solid 2px;
   padding: 5px;
 }
+
+/* INVENTORY */
+.notice{
+  color: green;
+}
+.inventory-section{
+  width: 70%;
+  margin:4rem auto;
+}
+.inventory-section *{
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.inventory-section h1{
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #000;
+  width: 100%;
+  text-align: center;
+}
+.inventory-section h2{
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #000;
+}
+
+.inventory-section p{
+  color: #000;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+.inventory-section li{
+  list-style: none;
+}
+.inventory-section table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  width: 100%;
+}
+
+.inventory-section th{
+  background-color: #e5e5e5;
+  border: 2px solid #000;
+  border-bottom: none;
+}
+
+.inventory-section td{
+  border: 2px solid #000;
+  border-top: none;
+  border-bottom: none;
+  opacity: 0.9;
+}
+.inventory-section td, .inventory-section th {
+  text-align: left;
+  padding: 8px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.inventory-section tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+.inventory-empty-data{
+  width: 100%;
+  padding: 2rem;
+  margin: 2rem 0;
+  background-color: #f5f5f5;
+}
+.inventory-new{
+color: #0151ff;
+font-size: 15px;
+text-transform: capitalize;
+cursor: pointer;
+}
+.inventories-list{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  border: 2px #000 solid;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+.inventory-remove{
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #0151ff;
+  border-bottom: 1px #0151ff solid;
+  font-size: 13px;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  }
+
+.inventories-list span{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.inventories-list span a{
+text-decoration: none;
+}
+
+.inventories-list span a:hover,.inventories-list span button:hover{
+  opacity: 0.7;
+  }
+  .inventory-form-cont{
+    width: 500px;
+    margin:40px auto;
+    display: grid;
+    row-gap: 15px;
+    font-family: sans-serif;
+  }
+  .inventory-form-cont h1{
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 0;
+  }
+  .inventory-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+  }
+  .inventory-form{
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 5px;
+  }
+  .inventory-label{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  .inventory-input, .inventory-textarea{
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 2px #000 solid;
+  }
+  .inventory-textarea{
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  .inventory-add-btn,.inventory-submit-btn{
+    border: 2px #000 solid;
+    background-color: transparent;
+    box-shadow: 4px 4px 1px rgb(0,0,0);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .inventory-add-btn{
+    padding: 0.5rem 3rem;
+    text-decoration: none;
+    color: #000;
+
+  }
+  .inventory-submit-btn{
+    width: 100%;
+    padding: 10px 0;
+  }
+  .inventory-form-cont select{
+    padding: 10px;
+    border: 2px #000 solid;
+    margin-bottom: 20px;
+  }
