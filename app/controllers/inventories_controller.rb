@@ -1,5 +1,4 @@
 class InventoriesController < ApplicationController
-
   def index
     @inventories = Inventory.where(user_id: current_user.id)
   end
@@ -16,7 +15,7 @@ class InventoriesController < ApplicationController
     @inventory = current_user.inventories.new(inventory_params)
     respond_to do |format|
       if @inventory.save
-        format.html { redirect_to inventories_path, notice: "Inventory was successfully created." }
+        format.html { redirect_to inventories_path, notice: 'Inventory was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -27,13 +26,13 @@ class InventoriesController < ApplicationController
     @inventory = Inventory.find(params[:id])
     @inventory.destroy
     respond_to do |format|
-      format.html { redirect_to inventories_url, notice: "Inventory was successfully destroyed." }
+      format.html { redirect_to inventories_url, notice: 'Inventory was successfully destroyed.' }
     end
   end
 
   private
 
-    def inventory_params
-      params.require(:inventory).permit(:name, :description)
-    end
+  def inventory_params
+    params.require(:inventory).permit(:name, :description)
+  end
 end
