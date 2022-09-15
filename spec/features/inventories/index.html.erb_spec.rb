@@ -5,12 +5,11 @@ RSpec.describe 'inventories/index', type: :feature do
     @user = User.create(name: 'name', email: 'name@gmail.com', password: 'password')
     @user.save
     login_as(@user)
-    @inventory = Inventory.create(name: "Inventory 1",description: "Inventory description", user: @user)
+    @inventory = Inventory.create(name: 'Inventory 1', description: 'Inventory description', user: @user)
     visit inventories_path
   end
 
   describe "Visit inventories' index page" do
-
     it 'should have inventory name' do
       expect(page).to have_text('Inventory 1')
     end
@@ -33,7 +32,7 @@ RSpec.describe 'inventories/index', type: :feature do
     end
 
     it 'redirect to add new inventory' do
-      click_link("Create new inventory", exact: true)
+      click_link('Create new inventory', exact: true)
       expect(page).to have_current_path(new_inventory_path)
     end
 
@@ -41,6 +40,5 @@ RSpec.describe 'inventories/index', type: :feature do
       click_button('REMOVE', exact: true)
       expect(page).to have_text('Inventory was successfully destroyed')
     end
-
   end
 end

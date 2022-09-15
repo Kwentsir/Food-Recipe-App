@@ -11,7 +11,6 @@ RSpec.describe 'inventories/new', type: :feature do
   end
 
   describe "Visit inventories' new page" do
-
     it 'should have title' do
       expect(page).to have_text('New inventory')
     end
@@ -32,7 +31,7 @@ RSpec.describe 'inventories/new', type: :feature do
     end
 
     it 'redirect to inventory index page' do
-      click_link("Back to inventories", exact: true)
+      click_link('Back to inventories', exact: true)
       expect(page).to have_current_path(inventories_path)
     end
 

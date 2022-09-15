@@ -5,8 +5,8 @@ RSpec.describe 'inventories/show', type: :feature do
     @user = User.create(name: 'name', email: 'name@gmail.com', password: 'password')
     @user.save
     login_as(@user)
-    @inventory = Inventory.create(name: "Inventory 1",description: "description", user: @user)
-    @food = Food.create(name: "Cake", measurment_unit: 'gram', price: 50)
+    @inventory = Inventory.create(name: 'Inventory 1', description: 'description', user: @user)
+    @food = Food.create(name: 'Cake', measurment_unit: 'gram', price: 50)
     @inventory.save
     @food.save
     @inventory_food = InventoryFood.create(quantity: 65, inventory: @inventory, food: @food)
@@ -14,7 +14,6 @@ RSpec.describe 'inventories/show', type: :feature do
   end
 
   describe "Visit inventories' show page" do
-
     it 'should have inventory name header' do
       expect(page).to have_text('Inventory 1')
     end
@@ -56,6 +55,5 @@ RSpec.describe 'inventories/show', type: :feature do
       click_button('Remove', exact: true)
       expect(page).to have_text('Inventory food was successfully destroyed')
     end
-
   end
 end
