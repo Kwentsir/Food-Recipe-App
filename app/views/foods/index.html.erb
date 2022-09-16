@@ -1,6 +1,4 @@
 <div>
-<p style="color: green"><%= notice %></p>
-
 <span class="new-food"><%= link_to "New food", new_food_path %></span>
 
 <div id="foods">
@@ -16,10 +14,9 @@
     <td><%= food.name %></td>
     <td><%= food.measurment_unit %></td>
     <td><%= food.price %></td>
-    <td><%= button_to "Delete", food, method: :delete %></td>
+    <td><%= button_to "Delete", { :action => 'destroy', :id => food.id }, :method => :delete %></td>
     <tr>
      <% end %>
     </table>
- 
 </div>
 </div>
