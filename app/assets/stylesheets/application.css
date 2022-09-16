@@ -248,7 +248,6 @@ th {
   margin-bottom: 20px;
 }
 
-
 /* Recipes */
 .recipe-section {
   width: 70%;
@@ -309,7 +308,8 @@ th {
   opacity: 0.9;
 }
 
-.recipe-section td, .recipe-section th {
+.recipe-section td, 
+.recipe-section th {
   text-align: left;
   padding: 8px;
   font-size: 15px;
@@ -365,7 +365,6 @@ th {
 }
 
 .recipes-list span a:hover,
-
 .recipes-list span button:hover {
   opacity: 0.7;
 }
@@ -416,7 +415,8 @@ th {
   margin-bottom: 20px;
 }
 
-.recipe-add-btn, .recipe-submit-btn {
+.recipe-add-btn, 
+.recipe-submit-btn {
   border: 2px #000 solid;
   background-color: transparent;
   box-shadow: 4px 4px 1px rgb(0, 0, 0);
