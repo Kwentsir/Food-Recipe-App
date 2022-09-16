@@ -11,10 +11,11 @@
     </div>
   <% end %>
 
-  <div>
+  <% if @foods.length > 0 %>
+
     <%= form.label :quantity, style: "display: block" %>
     <%= form.number_field :quantity %>
-  </div>
+
 
   <div>
     <%= form.label :recipe_id, style: "display: block" %>

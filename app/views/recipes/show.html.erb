@@ -1,10 +1,32 @@
 <p style="color: green"><%= notice %></p>
-
-<%= render @recipe %>
-
-<div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
-
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+<div class="recipe-section">
+<div class="recipe-header">
+<h1><%= @recipe.name%></h1>
+<p><%= @recipe.preparation_time%></p>
+<p><%= @recipe.cooking_time%></p>
+<p><%= Steps go here... %></p>
+<%= link_to "Generate Shopping list", new_recipe_recipe_food_path(@recipe.id), class: "recipe-add-btn"%>
+<%= link_to "Add ingredient", new_recipe_recipe_food_path(@recipe.id), class: "recipe-add-btn"%>
+</div>
+<% if @recipe.related_recipe_foods.length > 0 %>
+<table>
+<tr>
+<th>Food</th>
+<th>Quantity</th>
+<th>Price</th>
+<th>Actions</th>
+</tr>
+<% @recipe.related_recipe_foods.each do |recipe_food| %>
+<tr>
+<td><%= recipe_food.food.name %></td>
+<td><%= recipe_food.quantity %><%= recipe_food.food.measurment_unit %></td>
+<td><%= recipe_food.food.price %></td>
+<td><%= button_to "Modify", recipe_recipe_food_path(recipe_food.recipe.id, recipe_food), method: :update , class:"recipe-update"%></td>
+<td> <%= button_to "Remove", recipe_recipe_food_path(recipe_food.recipe.id, recipe_food), method: :delete , class:"recipe-remove"%></td>
+</tr>
+<% end %>
+</table>
+<% else %>
+<h2 class="recipe-empty-data">No Food added to this Recipe</h2>
+<% end %>
 </div>
