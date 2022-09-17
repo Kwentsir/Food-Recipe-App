@@ -37,8 +37,10 @@ To get a local copy up and running follow these simple example steps.
 * LinkedIn:[Onyeagoziri Akams](https://www.linkedin.com/in/onyeagoziri-akams/)
 * AngelList:[Onyeagoziri Akams](https://angel.co/u/onyeagoziri-akams)
 
+:bust_in_silhouette: **RWUBAKWANAYO**
 - GitHub: [@githubrwubakwanayo](https://github.com/RWUBAKWANAYO)
 - LinkedIn: [Rwubakwanayo](https://www.linkedin.com/in/rwubakwanayo-olivier)
+
 
 ## 🤝 Contributing
 
