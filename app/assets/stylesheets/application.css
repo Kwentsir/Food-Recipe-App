@@ -308,7 +308,7 @@ th {
   opacity: 0.9;
 }
 
-.recipe-section td, 
+.recipe-section td,
 .recipe-section th {
   text-align: left;
   padding: 8px;
@@ -360,10 +360,6 @@ th {
   justify-content: space-between;
 }
 
-.recipes-list span a {
-  text-decoration: none;
-}
-
 .recipes-list span a:hover,
 .recipes-list span button:hover {
   opacity: 0.7;
@@ -408,14 +404,14 @@ th {
   width: calc(100% - 20px);
   padding: 10px;
   border: 2px #000 solid;
-} 
+}
 
 .recipe-textarea {
   height: 200px;
   margin-bottom: 20px;
 }
 
-.recipe-add-btn, 
+.recipe-add-btn,
 .recipe-submit-btn {
   border: 2px #000 solid;
   background-color: transparent;
@@ -429,7 +425,7 @@ th {
   padding: 0.5rem 3rem;
   text-decoration: none;
   color: #000;
-} 
+}
 
 .recipe-submit-btn {
   width: 100%;
@@ -450,7 +446,7 @@ th {
 
 .recipe-form-cont .recipe-form .recipe-label {
   margin-top: 0;
-} 
+}
 
 .recipe-form-cont .recipe-form .recipe-input {
   width: 100%;
@@ -458,4 +454,4 @@ th {
 
 .recipe-form-cont .recipe-form .recipe-input:last-child {
   margin-bottom: 20px;
-} 
+}
