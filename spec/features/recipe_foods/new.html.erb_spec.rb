@@ -16,15 +16,15 @@ RSpec.describe 'recipe_foods/new', type: :feature do
 
   describe 'visit new recipe food page' do
     it 'should have header' do
-      expect(page).to have_text('New Recipe Food')
-    end
-
-    it 'should have recipe name' do
-      expect(page).to have_text('Recipe 1')
+      expect(page).to have_text('New recipe food')
     end
 
     it 'should have quantity label' do
       expect(page).to have_text('Quantity')
+    end
+
+    it 'should have food name label' do
+      expect(page).to have_text('Food 1')
     end
   end
 end

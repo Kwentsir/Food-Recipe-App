@@ -15,14 +15,6 @@ RSpec.describe 'recipes/index', type: :feature do
       expect(page).to have_text('Recipe 1')
     end
 
-    it 'should have recipe preparation time' do
-      expect(page).to have_text('10')
-    end
-
-    it 'should have recipe cooking time' do
-      expect(page).to have_text('10')
-    end
-
     it 'should have recipe description' do
       expect(page).to have_text('Recipe description')
     end
