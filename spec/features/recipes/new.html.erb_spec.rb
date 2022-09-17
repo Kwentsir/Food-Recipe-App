@@ -10,14 +10,11 @@ RSpec.describe 'recipes/new', type: :feature do
     fill_in 'Preparation time', with: '10'
     fill_in 'Cooking time', with: '10'
     fill_in 'Description', with: 'Recipe description'
-    fill_in 'Public', with: 'true'
+    page.check('Public')
   end
 
   describe 'visit recipes new page' do
-    it 'should have title' do
-      expect(page).to have_text('New recipe')
-    end
-
+ 
     it 'should have name label' do
       expect(page).to have_text('Name')
     end
@@ -39,7 +36,7 @@ RSpec.describe 'recipes/new', type: :feature do
     end
 
     it 'should have create button' do
-      expect(page).to have_selector(:link_or_button, 'Create Recipe', exact: true)
+      expect(page).to have_selector(:link_or_button, 'Create', exact: true)
     end
 
     it 'should have index page link' do
@@ -52,7 +49,7 @@ RSpec.describe 'recipes/new', type: :feature do
     end
 
     it 'redirect to index with success message' do
-      click_button('Create Recipe', exact: true)
+      click_button('Create', exact: true)
       expect(page).to have_current_path(recipes_path)
       expect(page).to have_text('Recipe was successfully created')
     end
