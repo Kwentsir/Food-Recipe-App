@@ -1,27 +1,20 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Recipes</h1>
-
-<div id="recipes">
- <% if @recipes.length > 0 %>
- <ul>
-  <% @recipes.each do |recipe| %>
-    <li>
-    <div class= "recipes-list">
-    <span>
-      <a href="<%= recipe_path(recipe) %>"><h2><%= recipe.name%></h2></a>
-      <%= button_to "REMOVE", recipe, class:"recipe-remove", method: :delete %>
-    </span>
-    <p>
-      <%= recipe.description %>
-    </p>
-    </div>
-    </li>
-  <% end %>
-  </ul>
+<section class="inventory-section">   
+  <% if @recipes.length > 0 %>    
+    <ul>
+      <% @recipes.each do |recipe| %>
+        <li>
+          <div class="inventories-list">
+            <span>
+              <a href="<%= recipe_path(recipe) %>"><h2><%= recipe.name%></h2></a>
+              <%= button_to "REMOVE", recipe,class:"inventory-delete", method: :delete %>
+            </span>
+          <p><%= recipe.description%></p>
+          </div>
+        <li>
+      <% end %>
+    </ul>
   <% else %>
-    <h2 class="recipe-empty-data">No Recipes!</h2>
+    <h3 class="recipe-empty-data">No Recipies!</h3>
   <% end %>
-<%= link_to "New recipe", new_recipe_path, class: "recipe-new" %>
-</div>
-
+  <%= link_to "Create new recipe", new_recipe_path, class:"recipe-new" %>
+</section>

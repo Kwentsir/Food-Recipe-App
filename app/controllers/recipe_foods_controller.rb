@@ -1,5 +1,5 @@
 class RecipeFoodsController < ApplicationController
-  before_action :set_recipe_food, only: %i[show update destroy]
+  before_action :set_recipe_food
 
   # GET /recipe_foods/new
   def new
@@ -14,7 +14,7 @@ class RecipeFoodsController < ApplicationController
 
     respond_to do |format|
       if @recipe_food.save
-        format.html { redirect_to recipe_food_url(@recipe_food), notice: 'Recipe food was successfully created.' }
+        format.html { redirect_to recipe_path(@recipe), notice: 'Recipe food was successfully created.' }
         format.json { render :show, status: :created, location: @recipe_food }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -29,7 +29,7 @@ class RecipeFoodsController < ApplicationController
     @recipe_food.destroy
 
     respond_to do |format|
-      format.html { redirect_to recipe_foods_url, notice: 'Recipe food was successfully destroyed.' }
+      format.html { redirect_to recipe_path(@recipe.id), notice: 'Recipe food was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -38,7 +38,7 @@ class RecipeFoodsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_recipe_food
-    @recipe_food = RecipeFood.find(params[:id])
+    @recipe = Recipe.find(params[:recipe_id])
   end
 
   # Only allow a list of trusted parameters through.
