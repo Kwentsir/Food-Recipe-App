@@ -14,7 +14,6 @@ RSpec.describe 'recipes/new', type: :feature do
   end
 
   describe 'visit recipes new page' do
- 
     it 'should have name label' do
       expect(page).to have_text('Name')
     end

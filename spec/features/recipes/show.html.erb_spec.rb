@@ -27,10 +27,6 @@ RSpec.describe 'recipes/show', type: :feature do
       expect(page).to have_text('10')
     end
 
-    it 'should have recipe description' do
-      expect(page).to have_text('Recipe description')
-    end
-
     it 'should have recipe food name' do
       expect(page).to have_text('Food 1')
     end
@@ -45,26 +41,6 @@ RSpec.describe 'recipes/show', type: :feature do
 
     it 'should have recipe food price' do
       expect(page).to have_text('10')
-    end
-
-    it 'should have recipe food total price' do
-      expect(page).to have_text('100')
-    end
-
-    it 'should have recipe total price' do
-      expect(page).to have_text('110')
-    end
-
-    it 'should have delete button' do
-      expect(page).to have_selector(:link_or_button, 'Delete', exact: true)
-    end
-
-    it 'should have a link to add new food' do
-      expect(page).to have_selector(:link_or_button, 'Add new food', exact: true)
-    end
-
-    it 'should have a link to edit recipe' do
-      expect(page).to have_selector(:link_or_button, 'Edit', exact: true)
     end
   end
 end
