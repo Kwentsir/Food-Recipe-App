@@ -13,13 +13,15 @@ class ShoppingListsController < ApplicationController
   def create
     @inventory = Inventory.find(params[:inventory_id])
     respond_to do |format|
-        format.html { redirect_to "/shopping_list/#{@recipe.id}/#{@inventory.id}", notice: "Shopping list was successfully generated." }
+      format.html do
+        redirect_to "/shopping_list/#{@recipe.id}/#{@inventory.id}", notice: 'Shopping list was successfully generated.'
+      end
     end
   end
-  
+
   private
-  
-    def compare
+
+  def compare
     @inventory = Inventory.find(params[:inventory_id])
     inv_foods = @inventory.related_inventory_foods.pluck(:food_id)
     rec_foods = @recipe.related_recipe_foods
@@ -28,19 +30,19 @@ class ShoppingListsController < ApplicationController
       list.push(item) unless inv_foods.include? item.food_id
     end
     list
-    end
+  end
 
-    def sum(list)
-      total = 0
-      list.each{|item| total += item.food.price}
-      total
-    end
+  def sum(list)
+    total = 0
+    list.each { |item| total += item.food.price }
+    total
+  end
 
-    def set_shopping_list
-      @recipe = Recipe.find(params[:recipe_id])
-    end
-  
-    def shopping_list_params
-      params.require(:shopping_list).permit(:inventory_id)
-    end
+  def set_shopping_list
+    @recipe = Recipe.find(params[:recipe_id])
+  end
+
+  def shopping_list_params
+    params.require(:shopping_list).permit(:inventory_id)
+  end
 end

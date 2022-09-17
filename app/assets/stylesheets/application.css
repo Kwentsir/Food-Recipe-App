@@ -13,13 +13,15 @@
  *= require_tree .
  *= require_self
  */
- 
- body, *{
+
+body,
+* {
   margin: 0;
   padding: 0;
- }
- /* NAVBAR */
-.navbar{
+}
+
+/* NAVBAR */
+.navbar {
   width: 80%;
   padding: 1.5rem 10% 1.5rem 10%;
   margin-bottom: 1rem;
@@ -28,23 +30,28 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   justify-content: space-between;
 }
-.navbar li{
+
+.navbar li {
   list-style: none;
   font-size: 16px;
   font-weight: 700;
   font-family: sans-serif;
   cursor: pointer;
 }
-.navbar li:last-child{
+
+.navbar li:last-child {
   display: none;
 }
-.navbar li a{
+
+.navbar li a {
   color: #000;
   text-decoration: none;
 }
-.navbar li a:hover{
+
+.navbar li a:hover {
   color: #0151ff;
 }
+
 .food-table {
   width: 80%;
   border: 2px solid;
@@ -185,7 +192,8 @@ th {
   padding: 1rem;
 }
 
-.inventory-remove, .inventory-delete {
+.inventory-remove,
+.inventory-delete {
   outline: none;
   border: none;
   background-color: transparent;
@@ -194,10 +202,12 @@ th {
   margin-top: 0.5rem;
   cursor: pointer;
 }
-.inventory-remove{
+
+.inventory-remove {
   font-size: 15px;
 }
-.inventory-delete{
+
+.inventory-delete {
   font-size: 12px;
 }
 
@@ -290,21 +300,26 @@ th {
   margin-bottom: 20px;
 }
 
-.inventory-shopping, .recipe-shopping{
+.inventory-shopping,
+.recipe-shopping {
   width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
-.inventory-shopping h4, .recipe-shopping h4{
+
+.inventory-shopping h4,
+.recipe-shopping h4 {
   font-size: 18px;
   font-family: sans-serif;
   line-height: 1.5;
 }
-.inventory-shopping a{
+
+.inventory-shopping a {
   color: #0151ff;
 }
-.recipe-shopping a{
+
+.recipe-shopping a {
   color: #000;
 }
 
@@ -368,7 +383,7 @@ th {
   opacity: 0.9;
 }
 
-.recipe-section td, 
+.recipe-section td,
 .recipe-section th {
   text-align: left;
   padding: 8px;
@@ -466,7 +481,8 @@ th {
   font-weight: 700;
   margin-top: 20px;
 }
-.public-check{
+
+.public-check {
   font-size: 16px;
   font-weight: 700;
   margin: 1rem 0 1.5rem 0;
@@ -477,14 +493,14 @@ th {
   width: calc(100% - 20px);
   padding: 10px;
   border: 2px #000 solid;
-} 
+}
 
 .recipe-textarea {
   height: 200px;
   margin-bottom: 20px;
 }
 
-.recipe-add-btn, 
+.recipe-add-btn,
 .recipe-submit-btn {
   border: 2px #000 solid;
   background-color: transparent;
@@ -498,7 +514,7 @@ th {
   padding: 0.5rem 3rem;
   text-decoration: none;
   color: #000;
-} 
+}
 
 .recipe-submit-btn {
   width: 100%;
@@ -519,7 +535,7 @@ th {
 
 .recipe-form-cont .recipe-form .recipe-label {
   margin-top: 0;
-} 
+}
 
 .recipe-form-cont .recipe-form .recipe-input {
   width: 100%;
@@ -527,14 +543,17 @@ th {
 
 .recipe-form-cont .recipe-form .recipe-input:last-child {
   margin-bottom: 20px;
-} 
-.public-btn{
+}
+
+.public-btn {
   display: flex;
   align-items: center;
   height: 20px;
   column-gap: 5px;
 }
-.enabled-cont,.disabled-cont{
+
+.disabled-cont,
+.enabled-cont {
   width: 40px;
   height: 20px;
   background-color: green;
@@ -542,27 +561,32 @@ th {
   border-radius: 20px;
   display: flex;
 }
-.enabled-cont button,.disabled-cont button{
+
+.disabled-cont button.enabled-cont button {
   height: 100%;
   width: 20px;
   background-color: #fff;
   outline: none;
-  border: none;
   border-radius: 20px;
   border: 1px #000 solid;
 }
-.enabled-cont{
+
+.enabled-cont {
   justify-content: flex-end;
 }
-.disabled-cont{
+
+.disabled-cont {
   justify-content: flex-start;
 }
-.public-recipe-wrapper{
+
+.public-recipe-wrapper {
   text-decoration: none;
 }
-.public-recipe-wrapper:hover{
-opacity: 0.8;
+
+.public-recipe-wrapper:hover {
+  opacity: 0.8;
 }
+
 .public-recipe {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -570,9 +594,11 @@ opacity: 0.8;
   margin-bottom: 2rem;
   padding: 1rem;
 }
-.public-recipe div{
+
+.public-recipe div {
   display: grid;
 }
-.public-recipe-name{
+
+.public-recipe-name {
   row-gap: 1rem;
 }

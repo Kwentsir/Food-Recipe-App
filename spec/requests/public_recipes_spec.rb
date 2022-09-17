@@ -12,69 +12,68 @@ require 'rails_helper'
 # of tools you can use to make these specs even more expressive, but we're
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
-RSpec.describe "/public_recipes", type: :request do
-  
+RSpec.describe '/public_recipes', type: :request do
   # This should return the minimal set of attributes required to create a valid
   # PublicRecipe. As you add validations to PublicRecipe, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
+  let(:valid_attributes) do
+    skip('Add a hash of attributes valid for your model')
+  end
 
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
+  let(:invalid_attributes) do
+    skip('Add a hash of attributes invalid for your model')
+  end
 
-  describe "GET /index" do
-    it "renders a successful response" do
+  describe 'GET /index' do
+    it 'renders a successful response' do
       PublicRecipe.create! valid_attributes
       get public_recipes_url
       expect(response).to be_successful
     end
   end
 
-  describe "GET /show" do
-    it "renders a successful response" do
+  describe 'GET /show' do
+    it 'renders a successful response' do
       public_recipe = PublicRecipe.create! valid_attributes
       get public_recipe_url(public_recipe)
       expect(response).to be_successful
     end
   end
 
-  describe "GET /new" do
-    it "renders a successful response" do
+  describe 'GET /new' do
+    it 'renders a successful response' do
       get new_public_recipe_url
       expect(response).to be_successful
     end
   end
 
-  describe "GET /edit" do
-    it "renders a successful response" do
+  describe 'GET /edit' do
+    it 'renders a successful response' do
       public_recipe = PublicRecipe.create! valid_attributes
       get edit_public_recipe_url(public_recipe)
       expect(response).to be_successful
     end
   end
 
-  describe "POST /create" do
-    context "with valid parameters" do
-      it "creates a new PublicRecipe" do
-        expect {
+  describe 'POST /create' do
+    context 'with valid parameters' do
+      it 'creates a new PublicRecipe' do
+        expect do
           post public_recipes_url, params: { public_recipe: valid_attributes }
-        }.to change(PublicRecipe, :count).by(1)
+        end.to change(PublicRecipe, :count).by(1)
       end
 
-      it "redirects to the created public_recipe" do
+      it 'redirects to the created public_recipe' do
         post public_recipes_url, params: { public_recipe: valid_attributes }
         expect(response).to redirect_to(public_recipe_url(PublicRecipe.last))
       end
     end
 
-    context "with invalid parameters" do
-      it "does not create a new PublicRecipe" do
-        expect {
+    context 'with invalid parameters' do
+      it 'does not create a new PublicRecipe' do
+        expect do
           post public_recipes_url, params: { public_recipe: invalid_attributes }
-        }.to change(PublicRecipe, :count).by(0)
+        end.to change(PublicRecipe, :count).by(0)
       end
 
       it "renders a successful response (i.e. to display the 'new' template)" do
@@ -84,20 +83,20 @@ RSpec.describe "/public_recipes", type: :request do
     end
   end
 
-  describe "PATCH /update" do
-    context "with valid parameters" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
+  describe 'PATCH /update' do
+    context 'with valid parameters' do
+      let(:new_attributes) do
+        skip('Add a hash of attributes valid for your model')
+      end
 
-      it "updates the requested public_recipe" do
+      it 'updates the requested public_recipe' do
         public_recipe = PublicRecipe.create! valid_attributes
         patch public_recipe_url(public_recipe), params: { public_recipe: new_attributes }
         public_recipe.reload
-        skip("Add assertions for updated state")
+        skip('Add assertions for updated state')
       end
 
-      it "redirects to the public_recipe" do
+      it 'redirects to the public_recipe' do
         public_recipe = PublicRecipe.create! valid_attributes
         patch public_recipe_url(public_recipe), params: { public_recipe: new_attributes }
         public_recipe.reload
@@ -105,7 +104,7 @@ RSpec.describe "/public_recipes", type: :request do
       end
     end
 
-    context "with invalid parameters" do
+    context 'with invalid parameters' do
       it "renders a successful response (i.e. to display the 'edit' template)" do
         public_recipe = PublicRecipe.create! valid_attributes
         patch public_recipe_url(public_recipe), params: { public_recipe: invalid_attributes }
@@ -114,15 +113,15 @@ RSpec.describe "/public_recipes", type: :request do
     end
   end
 
-  describe "DELETE /destroy" do
-    it "destroys the requested public_recipe" do
+  describe 'DELETE /destroy' do
+    it 'destroys the requested public_recipe' do
       public_recipe = PublicRecipe.create! valid_attributes
-      expect {
+      expect do
         delete public_recipe_url(public_recipe)
-      }.to change(PublicRecipe, :count).by(-1)
+      end.to change(PublicRecipe, :count).by(-1)
     end
 
-    it "redirects to the public_recipes list" do
+    it 'redirects to the public_recipes list' do
       public_recipe = PublicRecipe.create! valid_attributes
       delete public_recipe_url(public_recipe)
       expect(response).to redirect_to(public_recipes_url)
